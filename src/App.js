@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import  React,{useState} from "react";
+import * as ReactDOM from "react-dom";
+import Home from './Components/Home' 
+import TodoList from './Components/TodoList'
 
 function App() {
+  const [title,setTitle] = useState('');
+  const [description,setDescription] = useState('');
+  const [progress,setProgress] = useState('not-started');
+  const [allTodos, setAllTodos] = useState([])
+  
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+             <header>
+                <h1>Incyree todo app</h1>
+            </header>
+        <Home setTitle ={setTitle}
+              setDescription ={setDescription}
+              allTodos={allTodos}
+              setAllTodos ={setAllTodos}
+              title={title}
+              description={description}
+              progress={progress}
+              setProgress={setProgress}
+        />
+        <TodoList allTodos={allTodos} setAllTodos={setAllTodos}/>
+
+      
     </div>
   );
 }

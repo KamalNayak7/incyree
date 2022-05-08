@@ -2,6 +2,67 @@
   text-align: center;
 }
 
+*{
+  margin: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+body{
+  background-color:wheat;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+
+}
+
+header{
+  font-size: 5 rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form select {
+  padding: 0.5rem;
+  font-size: 20px;
+  border: none;
+  background: white;
+  color:brown;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form label{
+  padding: 0.5rem;
+  color:brown;
+  font-size: 20px;
+}
+.todo {
+  margin: 0.5rem;
+  background:seashell;
+  font-size: 1.5rem;
+  color: brown;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -11,6 +72,17 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.formTodo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.completed{
+  text-decoration: line-through;
+  opacity: 0.5;
 }
 
 .App-header {
@@ -36,3 +108,5 @@
     transform: rotate(360deg);
   }
 }
+
+
